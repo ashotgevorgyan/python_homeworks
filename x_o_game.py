@@ -3,7 +3,6 @@
 elements = ["-", "-", "-",
             "-", "-", "-",
             "-", "-", "-"]
-winner = ''
 
 # Show board after each step
 def showBoard():
@@ -48,12 +47,14 @@ getSuccessCombinations(elements)
 while not getSuccessCombinations(elements):
   playerMove("x", player_1)
   if (getSuccessCombinations(elements)):
-    winner = player_1
+    print("Success!!!")
+    print("%s you are winner hahaha!!!" % (player_1))
+    break
+  if (not '-' in elements):
+    print("Draw!!!")
     break
   playerMove("o", player_2)
   if (getSuccessCombinations(elements)):
-    winner = player_2
+    print("Success!!!")
+    print("%s you are winner hahaha!!!" % (player_2))
     break
-
-print("Success!!!")
-print("%s you are winner hahaha!!!" %(winner))
