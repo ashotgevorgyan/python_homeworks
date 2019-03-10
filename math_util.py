@@ -12,8 +12,6 @@ def mathActions(a, b):
   return ('Addition is ' + str(add), 'Subtraction is ' + str(minus),
           'Multiplication ' + str(mult), 'Division is ' + str(div))
 
-print('\n'.join(mathActions(10, 5)))
-
 # 2. Summary
 """
   :input numbers list
@@ -25,7 +23,6 @@ def sum(*a):
     s += int(i)
   return s
 
-print(sum(1, 3, '5', 6))
 
 # 3. Power of number
 """
@@ -38,7 +35,6 @@ def myPower(a, b):
     p*=a
   return p
 
-print(myPower(2,5))
 
 # 4. Factorial of number
 """
@@ -51,7 +47,6 @@ def myFactorial(a):
     b=b*i
   return b
 
-print(myFactorial(5))
 
 # 5. Fibonacci sequence
 """
@@ -67,4 +62,12 @@ def myFibonacci(a):
       list.append(list[i - 1] + list[i - 2])
   return list
 
-print(myFibonacci(20))
+def main():
+  print('\n'.join(mathActions(10, 5)))
+  print(sum(1, 3, '5', 6))
+  print(myPower(2,5))
+  print(myFactorial(5))
+  print(myFibonacci(20))
+
+if(__name__ == "__main__"):
+  main()
